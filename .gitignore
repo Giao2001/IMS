@@ -1,0 +1,31 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+
+# Virtual Environment
+venv/
+env/
+.venv/
+.env/
+Include/
+Scripts/
+Lib/
+
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Other files to ignore
+*.bak
+*.swp
+.DS_Store
+
