@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from warehouse.forms import WarehouseForm
 
@@ -7,7 +8,8 @@ def create_warehouse(request):
         form = WarehouseForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('create_warehouse')
+            messages.success(request, 'Warehouse created successfully!')
+            form = WarehouseForm()
     else:
         form = WarehouseForm()
 

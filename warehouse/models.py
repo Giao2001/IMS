@@ -5,8 +5,8 @@ from django.utils import timezone
 class Warehouse(models.Model):
     wh_code = models.CharField(max_length=20, primary_key=True)
     wh_name = models.CharField(max_length=100)
-    wh_comment = models.CharField(max_length=500, blank=True)
-    wh_bg = models.ImageField(upload_to='warehouse_images/')
+    wh_comment = models.CharField(max_length=500, null=True, blank=True)
+    wh_bg = models.ImageField(upload_to='warehouse_images/', null=True, blank=True)
     create_at = models.DateTimeField(default=timezone.now)
     create_by = models.DateTimeField(null=True)
     update_at = models.DateTimeField(default=timezone.now)
