@@ -1,6 +1,7 @@
-# from django.urls import path
-# from . import views
-#
-# urlpatterns = [
-#     path('warehouse/', )
-# ]
+from django.urls import path
+
+from warehouse.views import create_warehouse
+
+urlpatterns = [
+    path('create/', create_warehouse, name='create_warehouse'),
+]
