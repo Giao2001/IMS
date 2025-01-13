@@ -9,7 +9,9 @@ class WarehouseForm(forms.ModelForm):
         fields = ['wh_code', 'wh_name', 'wh_comment', 'wh_bg']
 
         widgets = {
-            'wh_comment': forms.Textarea(),
+            'wh_comment': forms.Textarea(attrs={
+                'style': 'height: 150px',
+            }),
         }
 
         labels = {
