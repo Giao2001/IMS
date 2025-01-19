@@ -3,21 +3,36 @@
 {% block title %}Warehouse Create{% endblock %}
 {% block css %}
     <style>
-        form {
-            margin: 2% auto;
-            width: 50%;
-            border-radius: 3.25rem;
+
+        button {
+            width: auto;
         }
+
+
+
     </style>
 {% endblock %}
 
 {% block containers %}
-    <form method="post" action="{% url 'create_warehouse' %}" enctype="multipart/form-data" class="shadow-lg p-4 rounded">
-        <h1>Create a New Book</h1>
-        {% csrf_token %}
-        {% crispy form %}
-        <button type="submit" class="btn btn-primary">Save</button>
-    </form>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="sdf" class="list-group-item list-group-item-action list-group-item-primary"
+                   role="button">Warehouse</a>
+                <a href="#" class="list-group-item" role="button">Warehouse</a>
+                <a href="#" class="list-group-item" role="button">Warehouse</a>
+                <a href="#" class="list-group-item" role="button">Warehouse</a>
+            </div>
+        </div>
+
+        <form class="col-md-9 border p-3" method="post" action="{% url 'create_warehouse' %}" enctype="multipart/form-data" class="shadow-lg p-4 rounded">
+            <h1>Create a New Book</h1>
+            {% csrf_token %}
+            {% crispy form %}
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+    </div>
 
 
     {% if messages %}
