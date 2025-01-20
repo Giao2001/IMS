@@ -1,8 +1,10 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from warehouse.forms import WarehouseForm
 
 
+@login_required
 def create_warehouse(request):
     if request.method == 'POST':
         form = WarehouseForm(request.POST, request.FILES)
